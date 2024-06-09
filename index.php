@@ -14,7 +14,7 @@
     <div class="w-screen h-screen *:">
 
         <div class="absolute top-1/2   mt-15  transform -translate-y-1/2 left-0 mx-auto  z-50 ">
-            <p class=" text-blue text-7xl w-full py-6  px-20">6second</p>
+            <p class=" text-blue text-7xl w-full py-6  px-20">6second Application</p>
             <p class=" text-5xl font-semibold w-full py-4  px-20 ">the best deal price</p>
             <p class=" text-xl font-semibold w-full   px-20 ">Explore a wide selection of shoes from various brands and style </p>
             <p class=" text-xl font-semibold w-full   px-20 ">from casual shoes to sports shoes</p>
