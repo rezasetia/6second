@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
 <!-- bagian di bawah ini nanti di hapus ya mx-16 nya ke dauble soal nya -->
     <div class="grid grid-cols-5 my-10 justify-center gap-x-10 md:mx-16"> 
         <div class="mx-10 col-span-5">
-            <h1 class="text-blue font-medium text-4xl -ml-3 mt-20">Kategori Prabot</h1>
+            <h1 class="text-blue font-medium text-4xl -ml-3 mt-20">Kategori Fashion</h1>
         </div>
         <?php
         // Loop through the array to display cards
