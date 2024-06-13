@@ -158,9 +158,7 @@ if ($result->num_rows > 0) {
                             <li>
                                 <a href="halamanProfile.php" class="block py-2 px-4 hover:bg-gray-100">Profile</a>
                             </li>
-                            <li>
-                                <a href="#" class="block py-2 px-4 hover:bg-gray-100">Settings</a>
-                            </li>
+                          
                             <li>
                                 <a href="#" id="logoutButton" class="block py-2 px-4 hover:bg-gray-100 hover:text-red-700 text-red-600">Logout</a>
                             </li>
