@@ -13,7 +13,7 @@
 <body>
     <div class="flex justify-center items-center h-screen">
         <div class="w-full max-w-md p-6 bg-white rounded-md shadow-md" style="margin-top: -100px;">
-            <h2 class="text-2xl font-bold mb-4 text-center">LOGIN</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center">LOGIN TEST CD</h2>
             <?php
             session_start();
 
