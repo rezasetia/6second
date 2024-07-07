@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = '6second';
-$user = 'root';
-$pass = '';
+$db = 'market2';
+$user = 'market2';
+$pass = 'market2pass';
 
 $connection = new mysqli($host, $user, $pass, $db);
 
