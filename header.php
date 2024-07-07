@@ -119,7 +119,7 @@ if ($result->num_rows > 0) {
         <div id="dropdown2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
             <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button2">
                 <li>
-                    <a href="Fashion.php"><button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Fashion</button></a>
+                    <a href="fashion.php"><button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Fashion</button></a>
                 </li>
                 <li>
                     <a href="elektronik.php"><button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Elektronik</button></a>
