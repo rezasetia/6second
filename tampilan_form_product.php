@@ -38,13 +38,13 @@ if (!isset($_SESSION['username'])) {
   <!-- awal main -->
   <main>
     <div id="content" class="content">
-      <article class="md:mt-32 mt-28 md:mx-16 mx-5">
-        <div class="font-medium md:text-5xl text-3xl my-10 text-sky-400 text-center">
+      <article class="mt-32 mx-16">
+        <div class="font-medium text-5xl my-10 text-sky-400 text-center">
           <h1>Fill in the following data below correctly</h1>
         </div>
 
         <div class=" gap-x-5">
-          <form action="aksi_form_product.php" method="POST" id="form_submit" class="md:flex gap-x-5" style="flex-basis: 100%" enctype="multipart/form-data">
+          <form action="aksi_form_product.php" method="POST" id="form_submit" class="flex gap-x-5" style="flex-basis: 100%" enctype="multipart/form-data">
 
             <div action="aksi_form_product.php" method="POST" id="form_submit" enctype="multipart/form-data" class="" style="flex-basis: 40%;">
               <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-sky-100">
@@ -191,9 +191,9 @@ if (!isset($_SESSION['username'])) {
 
                     <!-- kategori -->
 
-                    <div class="w-full flex flex-col my-4   ">
-                      <label class="font-base my-2 md:text-base text-sm font-light  " for="kategori"><b>Kategori</b></label>
-                      <select name="kategori" id="kategori" class="border px-4 py-2 rounded-md  ring-gray-300">
+                    <div class="w-full flex flex-col mb-4">
+                      <label for="kategori"><b>Kategori</b></label>
+                      <select name="kategori" id="kategori" class="border px-4 py-2">
                         <option value="elektronik">Elektronik</option>
                         <option value="otomotif">Otomotif</option>
                         <option value="prabot">Prabot</option>

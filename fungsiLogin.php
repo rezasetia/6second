@@ -23,13 +23,13 @@ if ($result->num_rows == 1) {
         if ($user['role'] == 'admin') {
               header("location:admin_dashboard.php");
         } else {
-            header('Location: validasilogin.php');
+            header('Location: dashboard.php');
         }
         exit;
     } else {
         // Jika password tidak cocok, kembalikan ke halaman login dengan pesan error
         $_SESSION['error'] = 'Password salah';
-        header('Location: login.php');
+        header('Location: validasilogin.php');
         exit;
     }
 } else {

@@ -39,8 +39,8 @@ if ($result->num_rows == 1) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin 6Second</title>
-    <link href="./output.css" rel="stylesheet">
+    <title>Profil</title>
+    <link href="/output.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -57,15 +57,15 @@ if ($result->num_rows == 1) {
     </div>
 <main>
       <div id="content" class="content">
-        <div class="p-4 sm:ml-64 md:mt-10 mt-10 bg-white">
+        <div class="p-4 sm:ml-64 md:mt-10 bg-white">
           <div class=" border-2 border-gray-200  bg-white border-dashed rounded-lg mt-12">
             <div class="mb-4 rounded bg-white">
               <div class=" shadow-lg px-4 py-2 rounded-lg">
-                <div class=" md:text-5xl md:pt-8 text-blue-600 text-left flex gap-x-1">
-                  <i class=" md:mt-0 mt-1 font-medium fa-solid fa-user md:text-7xl text-blue-600"></i>
+                <div class=" text-5xl pt-8 text-blue-600 text-left flex gap-x-1">
+                  <i class=" font-medium fa-solid fa-user md:text-7xl text-blue-600"></i>
                   <h1 class="md:text-7xl text-blue-600">Your Profile</h1>
                 </div>
-                <div class="md:flex justify-between font-reguler text-base">
+                <div class="flex justify-between font-reguler text-base">
                   <div class="flex gap-x-3 my-10">
                     <div>
                       <img class="w-20 h-20 rounded-full" src="<?php echo $profile_picture; ?>" alt="Rounded avatar" />
@@ -77,11 +77,11 @@ if ($result->num_rows == 1) {
                   </div>
                   <div class="flex gap-x-4 items-center">
                     <form id="deleteProfilePhotoForm" action="delete_profile_picture.php" method="post">
-                      <button type="button" id="deletePhotoButton" class="py-4 md:px-10 px-2.5 bg-red-500  md:text-base text-sm text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600">Delete Photo</button>
+                      <button type="button" id="deletePhotoButton" class="py-4 px-10 bg-red-500 text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600">Delete Photo</button>
                     </form>
                     <form action="upload_profile_picture.php" method="post" enctype="multipart/form-data">
                       <input type="file" id="profile_picture" name="profile_picture" class="hidden" onchange="this.form.submit()" />
-                      <label for="profile_picture" class="py-4  md:px-10 px-2.5 bg-blue-500 text-white md:text-base text-sm rounded-lg transition duration-300 ease-in-out hover:bg-blue-600 cursor-pointer">Upload New Photo</label>
+                      <label for="profile_picture" class="py-4 px-10 bg-blue-600 text-white rounded-lg transition duration-300 ease-in-out hover:bg-sky-500 cursor-pointer">Upload New Photo</label>
                     </form>
                   </div>
                 </div>
@@ -149,8 +149,8 @@ if ($result->num_rows == 1) {
                       placeholder="Konfirmasi Password Baru Anda" />
                   </div>
                   <div class="flex gap-x-4 justify-end my-10 mb-48">
-                    <a class="border-2 py-4 md:px-10 px-2.5 bg-red-500 text-white text-sm md:text-base rounded-lg transition duration-300 ease-in-out hover:bg-red-600" href="admin_dashboard.php">Cancel</a>
-                    <a href="admin_dashboard.php" type="submit" name="submit" class="py-4 md:px-10 px-2.5 md:text-base text-white bg-green-400 rounded-lg transition duration-300 ease-in-out hover:bg-green-600 hover:text-white" id="saveChangesButton">Save Changes</a>
+                    <a class="border-2 py-4 px-10 bg-red-500 text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600" href="admin_dashboard.php">Cancel</a>
+                    <button type="submit" name="submit" class="py-4 px-10 text-white bg-green-400 rounded-lg transition duration-300 ease-in-out hover:bg-green-600 hover:text-white" id="saveChangesButton">Save Changes</button>
                   </div>
                 </form>
               </div>

@@ -44,7 +44,6 @@ $product = $result->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6SECOND</title>
     <link rel="stylesheet" href="assets/app.css" />
-    <link rel="stylesheet" href="output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/your-embed-code.js"></script>
@@ -53,6 +52,9 @@ $product = $result->fetch_assoc();
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -121,6 +123,10 @@ $product = $result->fetch_assoc();
                             </div>
                             <!-- Ini adalah bagian yang menampilkan harga -->
                             <p class="text-3xl font-semibold text-gray-900">Rp <?php echo number_format($product['harga_barang'], 0, ',', '.'); ?></p>
+
+
+
+
                             <!-- Ini adalah bagian yang menampilkan informasi ketersediaan produk, tanggal masuk, dan kondisi -->
                             <div class="my-10 flex flex-col gap-y-2">
                                 <p class="text-gray-400 font-medium text-base">Availability : <span class="text-sky-500">In Stock</span></p>
@@ -131,18 +137,21 @@ $product = $result->fetch_assoc();
                             <!-- Ini adalah bagian yang menampilkan tombol untuk melakukan pembelian atau penawaran -->
                             <div>
                                 <hr class="border-t border-gray-300 font-semibold w-full my-4" />
-                                <div class="mt-4 sm:my-4 gap-x-8 items-center gap-y-3 md:gap-y-0  flex justify-center flex-wrap">
+                                <div class="mt-4 sm:my-4 gap-x-8 items-center flex justify-center flex-wrap">
                                     <a href="#" class="py-4 px-16 text-sm font-normal text-black bg-white rounded-md border-2 border-sky-400 hover:bg-sky-400 hover:text-white border-t border-b sm:mb-0 " role="button">
                                         Rp <?php echo htmlspecialchars(number_format($product['harga_barang'], 0, ',', '.')); ?>
                                     </a>
+
+
+
                                     <a href="https://api.whatsapp.com/send?phone=<?php echo htmlspecialchars($product['nomor_telepon']); ?>" class="py-4 px-16 text-white bg-sky-400 hover:bg-sky-500 font-normal rounded-md text-sm border-gray-300 border-b" role="button">Buat Tawaran</a>
                                 </div>
                                 <hr class="border-t border-gray-300 font-semibold w-full my-4" />
                             </div>
 
                             <!-- Ini adalah bagian yang menampilkan tombol untuk menghubungi penjual, jumlah like, lokasi, dan jumlah views -->
-                            <div class="flex items-center md:gap-x-4 gap-x-2 my-10">
-                                <a href="https://api.whatsapp.com/send?phone=<?php echo htmlspecialchars($product['nomor_telepon']); ?>" class="rounded-lg border bg-sky-400 hover:bg-sky-500 md:text-base text-xs text-center text-white py-3 md:py-10 md:px-6 px-1.5">Hubungi Sekarang</a>
+                            <div class="flex items-center gap-x-4 my-10">
+                                <a href="https://api.whatsapp.com/send?phone=<?php echo htmlspecialchars($product['nomor_telepon']); ?>" class="rounded-lg border bg-sky-400 hover:bg-sky-500 text-white py-3 px-6">Hubungi Sekarang</a>
 
 
                                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -174,32 +183,44 @@ $product = $result->fetch_assoc();
                                     }
                                     ?>
 
-                                    <button type="submit" id="likeButton" class="md:font-medium py-2 flex md:px-4 px-2.5 rounded-full border  border-gray-400 hover:border-sky-400 hover:bg-sky-400 <?php echo $like_class; ?>">
-                                        <svg class="w-4 h-4 inline-block mr-1 mt-1 <?php echo $like_class; ?>" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <button type="submit" id="likeButton" class="font-medium py-2 px-4 rounded-full border  border-gray-400 hover:border-sky-400 hover:bg-sky-400 <?php echo $like_class; ?>">
+                                        <svg class="w-4 h-4 inline-block mr-1 <?php echo $like_class; ?>" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M10 18l-1.45-1.316C4.357 13.56 2 11.367 2 8.5 2 6.019 4.019 4 6.5 4c1.543 0 2.914.793 3.5 2  .586-1.207 1.957-2 3.5-2 2.481 0 4.5 2.019 4.5 4.5 0 2.867-2.357 5.06-6.55 8.184L10 18z" clip-rule="evenodd"></path>
                                         </svg>
                                         <span id="likeText" class="<?php echo $like_text_color; ?>"><?php echo htmlspecialchars($product['jumlah_like']); ?></span>
                                     </button>
                                 </form>
 
+
+
+
+
+
+
                                 <!-- lokasi_barang -->
-                                <a href="<?php echo htmlspecialchars($product['link_maps']); ?>" target="_blank" title="Lokasi barang" rel="noopener noreferrer" class="text-gray-700 flex md:text-base text-sm items-center gap-2 rounded-full border border-gray-400 hover:border-sky-400 hover:bg-sky-400 hover:text-white py-2 px-4">
+                                <a href="<?php echo htmlspecialchars($product['link_maps']); ?>" target="_blank" title="Lokasi barang" rel="noopener noreferrer" class="text-gray-700 flex items-center gap-2 rounded-full border border-gray-400 hover:border-sky-400 hover:bg-sky-400 hover:text-white py-2 px-4">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <span><?php echo ucwords($product['lokasi_barang']); ?></span>
                                 </a>
+
+
                                 <!-- jumlah_viwers -->
 
-                                <div class="flex items-center md:text-base text-sm gap-2 text-gray-700 rounded-full border border-gray-400 py-2 md:px-4 px-2.5" title="Jumlah Views">
+                                <div class="flex items-center gap-2 text-gray-700 rounded-full border border-gray-400 py-2 px-4" title="Jumlah Views">
                                     <i class="fa-solid fa-eye text-gray-700"></i>
                                     <span><?php echo htmlspecialchars($product['jumlah_views']); ?></span>
                                 </div>
+
+
+
+
                             </div>
                         </div>
                     </div>
 
                     <!-- Ini adalah bagian yang menampilkan deskripsi produk -->
                     <div class="flex flex-col mx-10 gap-y-10 mt-10">
-                        <h1 class="font-semibold md:text-3xl text-left">Deskrisi produk</h1>
+                        <h1 class="font-semibold text-3xl text-left">Deskrisi produk</h1>
                         <div class="mx-3 font-light text-base text-gray-400 text-left">
                             <p class="mb-10"><?php echo htmlspecialchars($product['deskripsi_barang']); ?></p>
                         </div>
@@ -255,9 +276,15 @@ $product = $result->fetch_assoc();
                             </div>
                         </div>
                     </section>
+
+
                     <!-- Akhir komentar produk -->
+
                 </div>
             </section>
+
+
+
             <script>
                 function changeMainImage(event, imageUrl) {
                     event.preventDefault();

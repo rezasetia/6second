@@ -15,16 +15,7 @@ if (isset($_POST['nbarang'], $_POST['harga'], $_POST['whatsapp'], $_POST['kondis
     $nama_barang = $_POST['nbarang'];
     // Hilangkan karakter non-numerik seperti koma atau titik pada harga
     $harga_barang = preg_replace('/[^0-9]/', '', $_POST['harga']);
-    // $nomor_telepon = $_POST['whatsapp'];
-        // Menambahkan awalan "+62" jika belum ada
     $nomor_telepon = $_POST['whatsapp'];
-    if (substr($nomor_telepon, 0, 1) === '0') {
-        // Ganti 0 di awal nomor dengan +62
-        $nomor_telepon = '62' . substr($nomor_telepon, 1);
-    } elseif (substr($nomor_telepon, 0, 3) !== '62') {
-        // Jika tidak diawali dengan +62, tambahkan +62 di awal
-        $nomor_telepon = '62' . $nomor_telepon;
-    }
     $kondisi = implode(', ', $_POST['kondisi']); // Gabungkan kondisi menjadi satu string
     $kategori = $_POST["kategori"];
     $deskripsi_barang = $_POST['deskripsi'];

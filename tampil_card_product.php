@@ -55,7 +55,7 @@ if ($result->num_rows > 0) {
 
 
 <!-- bagian di bawah ini nanti di hapus ya mx-16 nya ke dauble soal nya -->
-    <div class="md:grid md:grid-cols-5 my-10 justify-center gap-x-10 md:mx-16"> 
+    <div class="grid grid-cols-5 my-10 justify-center gap-x-10 md:mx-16"> 
         <div class="mx-10 col-span-5">
             <h1 class="text-blue font-medium text-4xl -ml-3 mt-10">Barang Terkini</h1>
         </div>
@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
             ?>
             <div class="group flex my-7 justify-center md:col-span-1 max-w-screen-xl md:max-w-xs flex-col overflow-hidden bg-card-ec hover:shadow-xl">
                 <a href="tampil_detail_product.php?id=<?php echo $row['id']; ?>" class="relative flex h-72 overflow-hidden justify-center">
-                    <img class="card-image md:absolute w-full top-0 right-0 object-cover" src="<?php echo $row['gambar_barang_1']; ?>" alt="product image" />
+                    <img class="card-image absolute w-full top-0 right-0 object-cover" src="<?php echo $row['gambar_barang_1']; ?>" alt="product image" />
                     <div class="absolute bottom-0 mb-6 flex w-full justify-center space-x-4">
                         <div class="h-3 w-3 rounded-full border-2 border-white bg-white"></div>
                         <div class="h-3 w-3 rounded-full border-2 border-white bg-transparent"></div>

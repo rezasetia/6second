@@ -11,25 +11,21 @@
 
 
 <body>
-<div class="flex justify-center items-center h-screen mx-64">
-    <div class=" p-6 bg-white rounded-md shadow-md mt-[-100px]">
-        <div class="flex justify-center">
-            <img class="w-20" src="assets/img/new/logo.png" alt="">
-        </div>
-        <h2 class="text-2xl font-bold text-center text-gray-800">Selamat datang pada website 6Second</h2>
-        <p class="font-normal text-lg text-center mt-3 mb-4 text-gray-700">Silahkan Daftar Pada Form Berikut.</p>
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-full max-w-md p-6 bg-white rounded-md shadow-md" style="margin-top: -100px;">
+            <h2 class="text-2xl font-bold mb-4 text-center">REGISTER</h2>
           
             <form action="fungsiRegister.php" method="POST">
                 <div class="mb-4 relative">
                     <label for="username" class="block mb-1"></label>
                     <input type="text" id="username" name="username" required placeholder="UserName" class="w-full px-3 py-2 border rounded-md">
-                    <img src="./assets/img/onboarding/Vector (1).png" class="absolute right-3 top-2 h-6 " width="20 " height="10">
+                    <img src="./asset/Vector (1).png" class="absolute right-3 top-2 h-6 " width="20 " height="10">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block mb-1"></label>
                     <div class="relative">
                         <input type="password" id="password" name="password" required placeholder="Password" class="w-full px-3 py-2 border rounded-md pr-10">
-                        <img src="./assets/img/onboarding/Union.png" class=" absolute right-3 top-0 bottom-0 mt-3 cursor-pointer" onclick="togglePasswordVisibility()" width="20 " height="10">
+                        <img src="./asset/Union.png" class="absolute right-3 top-2 h-6 cursor-pointer" onclick="togglePasswordVisibility()" width="20 " height="10">
                     </div>
                 </div>
                 <div class="mb-4">
