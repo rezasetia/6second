@@ -1,4 +1,7 @@
+<!-- update hapus product yang ada komentar dan like nya -->
+
 <?php
+
 require_once 'koneksi.php'; // Koneksi ke database
 
 session_start();
@@ -168,7 +171,7 @@ $_POST = array();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Product Management</title>
+    <title>Admin 6Second</title>
     <link href="/output.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -184,7 +187,7 @@ $_POST = array();
 
 <main>
     <div id="content" class="content">
-        <div class="p-4 sm:ml-64 md:mt-10">
+        <div class="p-4 sm:ml-64 md:mt-10 mt-10">
             <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-12">
                 <div class="grid grid-cols-1 mb-4">
                     <div class="flex items-center justify-start gap-2 md:h-28 rounded bg-white">

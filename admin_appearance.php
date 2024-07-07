@@ -116,7 +116,7 @@ if(isset($_POST['is_active'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6SecondMarket</title>
+    <title>Admin 6Second</title>
     <link href="output.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/app.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -139,7 +139,7 @@ if(isset($_POST['is_active'])) {
 
 <main>
     <div id="content" class="content">
-        <div class="p-4 sm:ml-64 md:mt-10">
+        <div class="p-4 sm:ml-64 md:mt-10 mt-10">
             <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg mt-12">
                 <div class="grid grid-cols-1 mb-4">
                     <div class="flex items-center justify-start gap-2 md:h-28 rounded bg-white">
@@ -150,7 +150,7 @@ if(isset($_POST['is_active'])) {
                 <div class="mb-4 rounded bg-gray-50 ">
 
                 <form action="" method="post" enctype="multipart/form-data" class="my-4">
-                    <div class="flex items-center space-x-4">
+                    <div class="md:flex items-center space-x-4">
                         <div class="flex-grow">
                             <label for="gambar" class="block font-medium text-gray-700">Gambar:</label>
                             <input type="file" name="gambar" id="gambar" accept="image/*" required class="mt-1 px-2 py-1 border border-gray-300 rounded-md w-full">
