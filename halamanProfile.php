@@ -47,14 +47,14 @@ if ($result->num_rows == 1) {
         require_once 'header.php';
         ?>
     </div>
-    <div class="container mx-auto mt-32">
+    <div class="container mx-auto md:mt-32 mt-28">
         <article class="mt-32 mx-5">
-            <div class="bg-white shadow-lg px-10 py-2 rounded-lg">
-                <div class="font-medium text-5xl text-sky-400 text-left flex gap-x-2">
+            <div class="bg-white shadow-lg md:px-10 px-5 py-2 rounded-lg">
+                <div class="font-medium md:text-5xl text-3xl text-sky-400 text-left flex gap-x-2">
                     <h1>Your Profile</h1>
                     <i class="fa-solid fa-user"></i>
                 </div>
-                <div class="flex justify-between font-reguler text-base">
+                <div class="md:flex justify-between font-reguler text-base">
                     <div class="flex gap-x-3 my-10">
                         <div>
                             <img class="w-20 h-20 rounded-full" src="<?php echo $profile_picture; ?>" alt="Rounded avatar" />
@@ -65,12 +65,12 @@ if ($result->num_rows == 1) {
                         </div>
                     </div>
                     <div class="flex gap-x-4 items-center">
-                                                <form id="deleteProfilePhotoForm" action="delete_profile_picture.php" method="post">
-                            <button type="button" id="deletePhotoButton" class="py-4 px-10 bg-red-500 text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600">Delete Photo</button>
+                        <form id="deleteProfilePhotoForm" action="delete_profile_picture.php" method="post">
+                            <button type="button" id="deletePhotoButton" class="py-4 md:px-10 px-2.5 bg-red-500  md:text-base text-sm text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600">Delete Photo</button>
                         </form>
                         <form action="upload_profile_picture.php" method="post" enctype="multipart/form-data">
                             <input type="file" id="profile_picture" name="profile_picture" class="hidden" onchange="this.form.submit()">
-                            <label for="profile_picture" class="py-4 px-10 bg-sky-400 text-white rounded-lg transition duration-300 ease-in-out hover:bg-sky-500 cursor-pointer">Upload New Photo</label>
+                            <label for="profile_picture" class="py-4 md:px-10 px-2.5 bg-sky-400 text-white md:text-base text-sm rounded-lg transition duration-300 ease-in-out hover:bg-sky-500 cursor-pointer">Upload New Photo</label>
                         </form>
 
                     </div>
@@ -105,8 +105,8 @@ if ($result->num_rows == 1) {
                         <input type="password" id="confirm_new_password" name="confirm_new_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-5" placeholder="Konfirmasi Password Baru Anda">
                     </div>
                         <div class="flex gap-x-4 justify-end my-10 mb-48">
-                            <a class="border-2 py-4 px-10 bg-red-500 text-white rounded-lg transition duration-300 ease-in-out hover:bg-red-600" href="dashboard.php">Cancel</a>
-                            <button type="submit" name="submit" class="py-4 px-10 text-white bg-green-400 rounded-lg transition duration-300 ease-in-out hover:bg-green-600 hover:text-white" id="saveChangesButton">Save Changes</button>
+                            <a class="border-2 py-4 md:px-10 px-2.5 bg-red-500 text-white text-sm md:text-base rounded-lg transition duration-300 ease-in-out hover:bg-red-600" href="dashboard.php">Cancel</a>
+                            <button type="submit" name="submit" class="py-4 md:px-10 px-2.5 md:text-base text-white bg-green-400 rounded-lg transition duration-300 ease-in-out hover:bg-green-600 hover:text-white" id="saveChangesButton">Save Changes</button>
                         </div>
                 </form>
             </div>

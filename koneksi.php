@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$db = 'market2';
+$db = '6second';
 $user = 'root';
 $pass = '';
 

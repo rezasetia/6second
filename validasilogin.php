@@ -11,7 +11,7 @@
 <body>
     <div class="flex justify-center items-center h-screen">
         <div class="w-full max-w-md p-6 bg-white rounded-md shadow-md" style="margin-top: -100px;">
-        <h2 class="text-2xl font-bold mb-4 text-center text-green-600">Anda masuk setelah 5 detik</h2>
+        <h2 class="text-2xl font-bold mb-4 text-center text-green-600">Anda masuk setelah 6 detik</h2>
 
             <?php
             session_start();
@@ -29,10 +29,10 @@
             }
             ?>
 
-            <p id="redirect-info" class="text-center">Redirecting to login page in <span id="countdown">5</span> seconds...</p>
+            <p id="redirect-info" class="text-center">Redirecting to login page in <span id="countdown">6</span> seconds...</p>
 
             <script>
-                var count = 5; // Waktu countdown
+                var count = 6; // Waktu countdown
 
                 // Fungsi untuk mengurangi waktu countdown dan mengarahkan pengguna ke halaman login setelah waktu habis
                 function countdown() {

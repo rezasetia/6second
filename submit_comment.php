@@ -1,3 +1,5 @@
+<!-- halaman submit_comment.php -->
+
 <?php
 session_start();
 require_once 'koneksi.php';
@@ -14,40 +16,32 @@ if (isset($_POST['product_id'], $_POST['comment'])) {
     $query = $connection->prepare("INSERT INTO comments (product_id, username, comment, parent_id) VALUES (?, ?, ?, ?)");
     $query->bind_param('isss', $product_id, $username, $comment, $parent_id);
     if ($query->execute()) {
-        // Ambil pemilik produk dari tabel detail_barang
-        $product_owner_query = $connection->prepare("SELECT username FROM detail_barang WHERE id = ?");
-        $product_owner_query->bind_param('i', $product_id);
-        $product_owner_query->execute();
-        $product_owner_query->bind_result($product_owner);
-        $product_owner_query->fetch();
-        $product_owner_query->close();
-
-        // Tambahkan notifikasi untuk pemilik produk atau pemilik komentar pertama jika itu adalah balasan komentar
-        $message = "Ada komentar baru pada produk Anda.";
-        if ($parent_id !== null) {
-            // Ambil username dari komentar parent untuk balasan komentar
+        // Tambahkan notifikasi
+        if ($parent_id === null) {
+            // Komentar baru pada produk
+            $message = "Ada komentar baru pada produk Anda.";
+            $notification_username = $username; // Pemilik produk adalah pengirim notifikasi
+        } else {
+            // Balasan komentar
+            $message = "Ada balasan komentar pada produk Anda.";
+            // Ambil pemilik komentar yang dibalas
             $parent_comment_query = $connection->prepare("SELECT username FROM comments WHERE id = ?");
             $parent_comment_query->bind_param('i', $parent_id);
             $parent_comment_query->execute();
             $parent_comment_query->bind_result($parent_commenter);
             $parent_comment_query->fetch();
             $parent_comment_query->close();
-
-            // Notifikasi untuk balasan komentar
-            $message = "Ada balasan komentar pada produk Anda.";
-            $notification_username = $parent_commenter;
-        } else {
-            // Notifikasi untuk komentar baru
-            $notification_username = $product_owner;
+            $notification_username = $parent_commenter; // Pemilik komentar yang dibalas adalah pengirim notifikasi
         }
 
-        // Tambahkan notifikasi
+        // Tambahkan notifikasi ke database
         $notification_query = $connection->prepare("INSERT INTO notifications (username, product_id, action, parent_id, message) VALUES (?, ?, 'comment', ?, ?)");
         $notification_query->bind_param('siis', $notification_username, $product_id, $parent_id, $message);
         if ($notification_query->execute()) {
-             // Redirect ke halaman detail produk
-    $url = "tampil_detail_product.php?id=" . $product_id;
-    header("Location: $url");
+            // Redirect ke halaman detail produk
+            $url = "tampil_detail_product.php?id=" . $product_id;
+            header("Location: $url");
+            exit; // Pastikan untuk keluar setelah redirect
         } else {
             echo "Gagal menambahkan notifikasi.";
         }
