@@ -53,8 +53,8 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     $rows = $result->fetch_all(MYSQLI_ASSOC);
     ?>
-    <div class="mb-44 mt-24">
-          <div class="flex items-center justify-between md:mx-36">
+    <div class="mb-44 mt-28">
+          <div class="flex items-center justify-between md:mx-36 mx-3">
 
             <div class="font-medium md:text-5xl text-3xl text-sky-400 text-left flex gap-x-2">
               <h1>Your Favorit</h1>
